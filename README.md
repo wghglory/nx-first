@@ -40,6 +40,12 @@ npm install --save-dev @nrwl/express
 nx g @nrwl/express:app api --frontendProject=my-react-app
 ```
 
+Sync frontend and backend model:
+
+```bash
+nx g @nrwl/workspace:lib api-interface
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
