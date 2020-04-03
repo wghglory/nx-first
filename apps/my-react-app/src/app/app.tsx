@@ -8,12 +8,13 @@ import star from './star.svg';
 import { Route, Link } from 'react-router-dom';
 
 import { PageTitle } from '@nx-first/ui-header';
+import { ApiResponse, API_URL } from '@nx-first/api-interface';
 
 export const App = () => {
-  const [res, setRes] = useState({ message: 'loading...' });
+  const [res, setRes] = useState<ApiResponse>({ message: 'loading...' });
 
   useEffect(() => {
-    fetch('/api')
+    fetch(API_URL)
       .then(r => r.json())
       .then(setRes);
   }, []);
