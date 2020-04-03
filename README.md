@@ -14,6 +14,8 @@ npx create-nx-workspace nx-first
 # choose empty and Nx cli
 ```
 
+Create react app and UI library:
+
 ```bash
 # add plugin to generate react app
 npm install --save-dev @nrwl/react
@@ -26,6 +28,16 @@ nx g @nrwl/react:lib ui-header
 
 # generate react component inside ui-header library
 nx g @nrwl/react:component --project=ui-header page-title
+```
+
+Generate express application:
+
+```bash
+# add plugin to generate express app
+npm install --save-dev @nrwl/express
+
+# generate express app for my-react-app
+nx g @nrwl/express:app api --frontendProject=my-react-app
 ```
 
 ## Adding capabilities to your workspace
