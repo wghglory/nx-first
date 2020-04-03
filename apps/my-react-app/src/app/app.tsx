@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './app.scss';
 
@@ -10,6 +10,14 @@ import { Route, Link } from 'react-router-dom';
 import { PageTitle } from '@nx-first/ui-header';
 
 export const App = () => {
+  const [res, setRes] = useState({ message: 'loading...' });
+
+  useEffect(() => {
+    fetch('/api')
+      .then(r => r.json())
+      .then(setRes);
+  }, []);
+
   /*
    * Replace the elements below with your own.
    *
@@ -19,67 +27,13 @@ export const App = () => {
     <div className="app">
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to my-react-app!</h1>
+        <PageTitle></PageTitle>
       </header>
 
-      <PageTitle></PageTitle>
+      <h3>{res.message}</h3>
+      <hr />
 
       <main>
-        <h2>Resources &amp; Tools</h2>
-        <p>Thank you for using and showing some ♥ for Nx.</p>
-        <div className="flex github-star-container">
-          <a
-            href="https://github.com/nrwl/nx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            If you like Nx, please give it a star:
-            <div className="github-star-badge">
-              <img src={star} className="material-icons" alt="" />
-              Star
-            </div>
-          </a>
-        </div>
-        <p>Here are some links to help you get started.</p>
-        <ul className="resources">
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
-            >
-              Nx video course
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/getting-started/what-is-nx"
-            >
-              Nx video tutorial
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/tutorial/01-create-application"
-            >
-              Interactive tutorial
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a className="resource flex" href="https://connect.nrwl.io/">
-              <img
-                height="36"
-                alt="Nrwl Connect"
-                src="https://connect.nrwl.io/assets/img/CONNECT_ColorIcon.png"
-              />
-              <span className="gutter-left">Nrwl Connect</span>
-            </a>
-          </li>
-        </ul>
-        <h2>Next Steps</h2>
-        <p>Here are some things you can do with Nx.</p>
         <details open>
           <summary>Add UI library</summary>
           <pre>{`# Generate UI lib

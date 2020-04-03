@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:my-react-app": "nx serve my-react-app",
+    "start:express": "nx serve api",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
