@@ -20,6 +20,9 @@ npm install --save-dev @nrwl/react
 
 # generate react app
 nx generate @nrwl/react:app my-react-app
+
+# generate react library
+nx g @nrwl/react:lib ui-header
 ```
 
 ## Adding capabilities to your workspace
