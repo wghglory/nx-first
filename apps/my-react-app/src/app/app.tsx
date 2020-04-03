@@ -7,6 +7,8 @@ import star from './star.svg';
 
 import { Route, Link } from 'react-router-dom';
 
+import { PageTitle } from '@nx-first/ui-header';
+
 export const App = () => {
   /*
    * Replace the elements below with your own.
@@ -19,6 +21,9 @@ export const App = () => {
         <Logo width="75" height="75" />
         <h1>Welcome to my-react-app!</h1>
       </header>
+
+      <PageTitle></PageTitle>
+
       <main>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
