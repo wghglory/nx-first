@@ -23,6 +23,9 @@ nx generate @nrwl/react:app my-react-app
 
 # generate react library
 nx g @nrwl/react:lib ui-header
+
+# generate react component inside ui-header library
+nx g @nrwl/react:component --project=ui-header page-title
 ```
 
 ## Adding capabilities to your workspace
