@@ -14,6 +14,14 @@ npx create-nx-workspace nx-first
 # choose empty and Nx cli
 ```
 
+```bash
+# add plugin to generate react app
+npm install --save-dev @nrwl/react
+
+# generate react app
+nx generate @nrwl/react:app my-react-app
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
