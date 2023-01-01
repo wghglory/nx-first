@@ -36,12 +36,12 @@
     "express": "4.17.1"
   },
   "devDependencies": {
-    "@nrwl/cypress": "9.2.1",
+    "@nrwl/cypress": "15.4.2",
     "@nrwl/eslint-plugin-nx": "9.2.1",
-    "@nrwl/express": "9.2.1",
+    "@nrwl/express": "9.8.0",
     "@nrwl/jest": "9.2.1",
-    "@nrwl/react": "9.2.1",
-    "@nrwl/web": "9.2.1",
+    "@nrwl/react": "15.4.2",
+    "@nrwl/web": "15.4.2",
     "@nrwl/workspace": "9.2.1",
     "@testing-library/react": "9.4.0",
     "@types/jest": "25.1.4",
